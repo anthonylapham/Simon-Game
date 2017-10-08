@@ -1,0 +1,34 @@
+body {
+  background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/starring.png');
+}
+
+#start {
+  padding: 25px 50px;
+  text-align: center;
+  font-size: 15px;
+  position: absolute; top: 250px; left: 600px;
+}
+
+#red {
+  padding: 50px 100px;
+  background-color: red;
+  position: absolute; top: 145px; left: 665px;
+}
+
+#blue {
+  padding: 50px 100px;
+  background-color: blue;
+  position: absolute; top: 325px; left: 665px;
+}
+
+#yellow {
+  padding: 50px 100px;
+  background-color: yellow;
+  position: absolute; top: 325px; left: 465px;
+}
+
+#green {
+  padding: 50px 100px;
+  background-color: green;
+  position: absolute; top: 145px; left: 465px;
+}
