@@ -6,29 +6,47 @@ body {
   padding: 25px 50px;
   text-align: center;
   font-size: 15px;
-  position: absolute; top: 250px; left: 600px;
+  position: absolute;
+  top: 350px;
+  left: 430px;
+  border-color: #2F4F4F;
+  background-color: #F8F8FF;
+  color: black;
+  font-weight: bolder;
 }
 
 #red {
   padding: 50px 100px;
   background-color: red;
-  position: absolute; top: 145px; left: 665px;
+  position: absolute;
+  top: 145px;
+  left: 500px;
+  border-color: black;
 }
 
 #blue {
   padding: 50px 100px;
   background-color: blue;
-  position: absolute; top: 325px; left: 665px;
+  position: absolute;
+  top: 250px;
+  left: 500px;
+  border-color: black;
 }
 
 #yellow {
   padding: 50px 100px;
   background-color: yellow;
-  position: absolute; top: 325px; left: 465px;
+  position: absolute;
+  top: 250px;
+  left: 300px;
+  border-color: black;
 }
 
 #green {
   padding: 50px 100px;
   background-color: green;
-  position: absolute; top: 145px; left: 465px;
+  position: absolute;
+  top: 145px;
+  left: 300px;
+  border-color: black;
 }
