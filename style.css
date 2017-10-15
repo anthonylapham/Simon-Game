@@ -2,13 +2,27 @@ body {
   background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/starring.png');
 }
 
+.boxed {
+  border-top: 10px;
+  border-bottom: 10px;
+  border-left: 10px;
+  border-right: 10px;
+  border-color: black;
+  padding: 10px 25px;
+  text-align: center;
+  position: absolute;
+  top: 100px;
+  left: 630px;
+  background-color: white;
+}
+
 #start {
   padding: 25px 50px;
   text-align: center;
   font-size: 15px;
   position: absolute;
   top: 350px;
-  left: 430px;
+  left: 630px;
   border-color: #2F4F4F;
   background-color: #F8F8FF;
   color: black;
@@ -20,7 +34,7 @@ body {
   background-color: red;
   position: absolute;
   top: 145px;
-  left: 500px;
+  left: 700px;
   border-color: black;
 }
 
@@ -29,7 +43,7 @@ body {
   background-color: blue;
   position: absolute;
   top: 250px;
-  left: 500px;
+  left: 700px;
   border-color: black;
 }
 
@@ -38,7 +52,7 @@ body {
   background-color: yellow;
   position: absolute;
   top: 250px;
-  left: 300px;
+  left: 500px;
   border-color: black;
 }
 
@@ -47,6 +61,6 @@ body {
   background-color: green;
   position: absolute;
   top: 145px;
-  left: 300px;
+  left: 500px;
   border-color: black;
 }
