@@ -31,16 +31,32 @@ body {
 
 #red {
   padding: 50px 100px;
-  background-color: red;
+  background-color: rgba(204, 51, 30, 1);
   position: absolute;
   top: 145px;
   left: 700px;
   border-color: black;
+  /*animation-name: flash;
+  animation-duration: 1s;
+  animation-timing-function: 1s;
+  animation-iteration-count: 2s;*/
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1.0;
+  }
 }
 
 #blue {
   padding: 50px 100px;
-  background-color: blue;
+  background-color: rgba(26, 62, 217, 1);
   position: absolute;
   top: 250px;
   left: 700px;
@@ -49,7 +65,7 @@ body {
 
 #yellow {
   padding: 50px 100px;
-  background-color: yellow;
+  background-color: rgba(240, 238, 34, 1);
   position: absolute;
   top: 250px;
   left: 500px;
@@ -58,7 +74,7 @@ body {
 
 #green {
   padding: 50px 100px;
-  background-color: green;
+  background-color: rgba(33, 224, 57, 1);
   position: absolute;
   top: 145px;
   left: 500px;
