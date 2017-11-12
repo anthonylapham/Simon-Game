@@ -36,40 +36,40 @@ $(document).ready(function() {
       }
   }
 
-    $("#start").on("click", function(){
-      var strict = // get the value from jQuery checkbox
+  $("#start").on("click", function() {
+    var strict = // get the value from jQuery checkbox
       game = new State(strict)
+    playSequence = setInterval(lightUpSquare, 1000)
+    // hide start button and checkbox
+  });
+
+  $('.btn').on('click', function() {
+    var userAnswer = $(this).data('value')
+    var correctAnswer = game.getCurrentSequence[game.counter]
+
+    console.log('USER ANSWER:', userAnswer)
+    console.log('CORRECT ANSWER', correctAnswer)
+    console.log('CURRENT SEQUENCE', game.getCurrentSequence)
+    console.log('\n')
+
+    // If round isn't over and correct answer, increment counter and await another player input
+    if (userAnswer == correctAnswer && game.counter < game.round) {
+      game.counter++
+    }
+    // display an alert if the answer is wrong
+    else if (userAnswer != correctAnswer) {
+      // check if game.strict is true or not and handle as needed
+      alert('WRONG, SUCK AN EGG')
+      game.counter = 0
       playSequence = setInterval(lightUpSquare, 1000)
-      // hide start button and checkbox
-    });
+    }
 
-    $('.btn').on('click', function() {
-      var userAnswer = $(this).data('value')
-      var correctAnswer = game.getCurrentSequence[game.counter]
-
-      console.log('USER ANSWER:', userAnswer)
-      console.log('CORRECT ANSWER', correctAnswer)
-      console.log('CURRENT SEQUENCE', game.getCurrentSequence)
-      console.log('\n')
-
-      // If round isn't over and correct answer, increment counter and await another player input
-      if (userAnswer == correctAnswer && game.counter < game.round) {
-        game.counter++
-      }
-      // display an alert if the answer is wrong
-      else if (userAnswer != correctAnswer) {
-        // check if game.strict is true or not and handle as needed
-        alert('WRONG, SUCK AN EGG')
-        game.counter = 0
-        playSequence = setInterval(lightUpSquare, 1000)
-      }
-
-      // If we successfully recalled all numbers in getCurrentSequence, move to next round
-      if (game.counter === game.round) {
-        game.counter = 0
-        game.round++
+    // If we successfully recalled all numbers in getCurrentSequence, move to next round
+    if (game.counter === game.round) {
+      game.counter = 0
+      game.round++
         game.getCurrentSequence = game.sequence.slice(0, game.round)
-        playSequence = setInterval(lightUpSquare, 1000)
-      }
-    })
+      playSequence = setInterval(lightUpSquare, 1000)
+    }
+  })
 })
