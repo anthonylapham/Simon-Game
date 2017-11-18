@@ -32,6 +32,7 @@ $(document).ready(function() {
     game.counter++
       if (game.counter === game.round) {
         game.counter = 0
+        $("#counter").text(game.counter)
         clearInterval(playSequence)
       }
   }
@@ -40,6 +41,7 @@ $(document).ready(function() {
     var strict = // get the value from jQuery checkbox
       game = new State(strict)
     playSequence = setInterval(lightUpSquare, 1000)
+    $("#start").hide();
     // hide start button and checkbox
   });
 
@@ -51,6 +53,7 @@ $(document).ready(function() {
     console.log('CORRECT ANSWER', correctAnswer)
     console.log('CURRENT SEQUENCE', game.getCurrentSequence)
     console.log('\n')
+    console.log(game.counter)
 
     // If round isn't over and correct answer, increment counter and await another player input
     if (userAnswer == correctAnswer && game.counter < game.round) {
@@ -59,7 +62,7 @@ $(document).ready(function() {
     // display an alert if the answer is wrong
     else if (userAnswer != correctAnswer) {
       // check if game.strict is true or not and handle as needed
-      alert('WRONG, SUCK AN EGG')
+      alert('WRONG, TRY AGAIN')
       game.counter = 0
       playSequence = setInterval(lightUpSquare, 1000)
     }
