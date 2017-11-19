@@ -32,7 +32,7 @@ $(document).ready(function() {
     game.counter++
       if (game.counter === game.round) {
         game.counter = 0
-        $("#counter").text(game.counter)
+        //$("#counter").text(game.counter)
         clearInterval(playSequence)
       }
   }
@@ -58,6 +58,7 @@ $(document).ready(function() {
     // If round isn't over and correct answer, increment counter and await another player input
     if (userAnswer == correctAnswer && game.counter < game.round) {
       game.counter++
+        $("#counter").text(game.round)
     }
     // display an alert if the answer is wrong
     else if (userAnswer != correctAnswer) {
